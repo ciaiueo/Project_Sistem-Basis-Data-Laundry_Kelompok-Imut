@@ -1,237 +1,159 @@
-# PRODUCT REQUIREMENTS DOCUMENT (PRD)
 
-## Sistem Basis Data Toko Penjualan Retail
+# Sistem Basis Data Laundry
 
-### Kelompok Left Join
+## 1. Deskripsi Proyek
 
-| No | Nama                       | NPM        |
-| -- | -------------------------- | ---------- |
-| 1  | Nazwa Aulia Hanifa         | 4525210053 |
-| 2  | Nevilla Ghilar Apryanti    | 4525210054 |
-| 3  | Nuristya Putri Agustina    | 4525210055 |
-| 4  | Ratu Annisaa Nabila Meysun | 4525210063 |
-| 5  | Tazkia Putri Arsyad        | 4525210073 |
-| 6  | Septia Fitri Rahmadhani    | 4525210097 |
+Proyek ini membahas rancangan sistem basis data untuk usaha laundry. Sistem ini dibuat untuk membantu pencatatan data pelanggan, pegawai, layanan laundry, dan transaksi agar lebih teratur dan mudah dicari.
 
-### Link ERD
+## 2. Anggota Kelompok
 
-[Klik di sini untuk melihat ERD](https://drive.google.com/file/d/15H7NKOZa1VQpePpmL8VbLYjteFEjeh94/view?usp=sharing)
+1. Nazwa Aulia Hanifa — 4525210053
+2. Nevilla Ghilar Apryanti — 4525210054
+3. Nuristya Putri Agustina — 4525210055
+4. Ratu Annisaa Nabila Meysun — 4525210063
+5. Tazkia Putri Arsyad — 4525210073
+6. Septia Fitri Rahmadhani — 4525210097
 
----
 
-## 1. Latar Belakang
+## Link Pengumpulan Tugas
 
-Toko penjualan retail membutuhkan data yang teratur agar kegiatan penjualan dapat dicatat dengan baik. Data yang perlu dikelola antara lain data barang, pelanggan, pegawai, supplier, dan transaksi penjualan.
+Semua file dan hasil pengerjaan tugas Sistem Basis Data Laundry dapat diakses melalui link Google Drive berikut.
 
-Oleh karena itu, dibuat sistem basis data toko penjualan retail untuk membantu menyimpan dan mengelola data tersebut. Dengan adanya sistem ini, data transaksi juga dapat lebih mudah dicatat dan digunakan untuk membuat laporan.
+**Folder Google Drive:** [Klik di sini untuk melihat semua file tugas](https://drive.google.com/drive/folders/1P9mAvXEskiaN0fCUKwG26f0a9xHlJnWL?usp=sharing)
 
-## 2. Tujuan Proyek
+## 4. Product Requirements Document (PRD)
 
-Tujuan dari pembuatan sistem basis data ini yaitu:
+### 4.1 Latar Belakang
 
-* Mengelola data barang.
-* Mengelola data pelanggan.
-* Mengelola data pegawai.
-* Mencatat transaksi penjualan.
-* Mencatat barang yang dibeli dalam setiap transaksi.
-* Membantu pengelolaan stok barang.
-* Membantu menghasilkan laporan penjualan.
+Usaha laundry memiliki banyak data yang perlu dicatat, mulai dari data pelanggan, jenis layanan, pegawai, sampai transaksi. Jika pencatatan masih dilakukan secara manual, data bisa tercampur dan proses pencarian informasi menjadi lebih sulit.
 
-## 3. Deskripsi Produk
+Oleh karena itu, diperlukan rancangan sistem basis data laundry yang dapat membantu penyimpanan data dengan lebih terstruktur.
 
-Sistem ini merupakan basis data untuk toko penjualan retail. Data dalam sistem dibagi menjadi beberapa tabel yang saling berhubungan.
+### 4.2 Tujuan Sistem
 
-Tabel yang digunakan yaitu:
+Tujuan dari sistem basis data laundry ini adalah:
+- Menyimpan data pelanggan dengan rapi.
+- Menyimpan data pegawai yang bekerja di laundry.
+- Mengelola informasi layanan dan harga laundry.
+- Mencatat transaksi laundry dari pakaian masuk sampai selesai.
+- Mencatat berat cucian dan biaya layanan.
+- Mempermudah pencarian data transaksi pelanggan.
 
-* Barang
-* Pelanggan
-* Pegawai
-* Supplier
-* Penjualan
-* Detail Penjualan
+### 4.3 Pengguna Sistem
 
-Tabel Penjualan digunakan untuk menyimpan data transaksi, sedangkan Detail Penjualan digunakan untuk menyimpan barang-barang yang terdapat dalam setiap transaksi.
+Pengguna yang berkaitan dengan sistem ini adalah:
 
-## 4. Kebutuhan Pengguna
+- **Pegawai laundry:** mencatat data pelanggan, layanan, transaksi, dan status cucian.
+- **Pemilik laundry:** memeriksa transaksi dan informasi pembayaran.
+- **Pelanggan:** sebagai pihak yang menggunakan layanan laundry dan datanya dicatat dalam sistem.
 
-Pengguna sistem membutuhkan beberapa data dan informasi berikut:
+### 4.4 Ruang Lingkup
 
-| Pengguna       | Kebutuhan                                               |
-| -------------- | ------------------------------------------------------- |
-| Pegawai        | Mencatat transaksi penjualan dan data pelanggan         |
-| Pengelola toko | Mengelola data barang, pegawai, supplier, dan transaksi |
-| Pemilik toko   | Melihat informasi dan laporan penjualan                 |
+Sistem yang dirancang meliputi:
+- Pengelolaan data pelanggan.
+- Pengelolaan data pegawai.
+- Pengelolaan data layanan laundry.
+- Pencatatan transaksi laundry.
+- Pencatatan detail layanan pada setiap transaksi.
+- Pencatatan status pengerjaan dan total pembayaran.
 
-## 5. User Story
+Proyek ini berfokus pada analisis kebutuhan dan rancangan basis data, bukan aplikasi laundry yang sudah siap digunakan.
 
-Beberapa contoh kebutuhan pengguna dalam sistem:
+### 4.5 Kebutuhan Fungsional
 
-* Sebagai pegawai, saya ingin mencatat transaksi penjualan agar data penjualan tersimpan.
-* Sebagai pegawai, saya ingin mencatat barang yang dibeli pelanggan dalam satu transaksi.
-* Sebagai pengelola toko, saya ingin menyimpan data barang agar stok dan harga barang dapat dikelola.
-* Sebagai pengelola toko, saya ingin menyimpan data pelanggan dan pegawai.
-* Sebagai pemilik toko, saya ingin melihat data penjualan untuk mengetahui transaksi yang sudah dilakukan.
+| Kode | Kebutuhan |
+|---|---|
+| FR-01 | Sistem dapat menyimpan data pelanggan. |
+| FR-02 | Sistem dapat menyimpan data pegawai. |
+| FR-03 | Sistem dapat menyimpan jenis layanan, harga per kilogram, dan estimasi pengerjaan. |
+| FR-04 | Sistem dapat mencatat transaksi laundry. |
+| FR-05 | Sistem dapat mencatat berat cucian, harga, dan subtotal layanan. |
+| FR-06 | Sistem dapat menyimpan status transaksi, seperti diproses, selesai, atau diambil. |
+| FR-07 | Satu pelanggan dapat melakukan beberapa transaksi. |
+| FR-08 | Satu pegawai dapat menangani beberapa transaksi. |
+| FR-09 | Satu transaksi dapat memiliki beberapa detail layanan. |
+| FR-10 | Data transaksi dapat dicari berdasarkan nomor transaksi atau pelanggan. |
 
-## 6. Ruang Lingkup
+### 4.6 Kebutuhan Nonfungsional
 
-### Yang termasuk dalam sistem
+- Data disimpan dengan struktur yang jelas dan konsisten.
+- Setiap entitas utama memiliki primary key sebagai identitas unik.
+- Hubungan antarentitas harus sesuai dengan rancangan ERD.
+- Nama tabel dan atribut dibuat agar mudah dipahami.
+- Rancangan basis data dapat dikembangkan jika ada kebutuhan baru.
 
-* Data barang
-* Data pelanggan
-* Data pegawai
-* Data supplier
-* Data penjualan
-* Detail penjualan
-* Relasi antar tabel
-* Data stok barang
-* Data harga barang
-* Informasi transaksi penjualan
+### 4.7 Rancangan Entitas dan Atribut
 
-### Yang tidak dibahas dalam sistem
+**1. Pelanggan**
+- Kode_Pelanggan (Primary Key)
+- Nama_Pelanggan
+- No_Telp
+- Alamat
 
-* Pembayaran online
-* Aplikasi mobile
-* Pengiriman barang
-* Sistem promo atau voucher
-* Marketplace
+**2. Pegawai**
+- Kode_Pegawai (Primary Key)
+- Nama_Pegawai
+- Jabatan
+- No_Telp
 
-## 7. Persyaratan Fungsional
-
-| Kode  | Persyaratan                                                  |
-| ----- | ------------------------------------------------------------ |
-| FR-01 | Sistem dapat menyimpan data barang.                          |
-| FR-02 | Sistem dapat menyimpan data pelanggan.                       |
-| FR-03 | Sistem dapat menyimpan data pegawai.                         |
-| FR-04 | Sistem dapat menyimpan data supplier.                        |
-| FR-05 | Sistem dapat mencatat transaksi penjualan.                   |
-| FR-06 | Sistem dapat mencatat detail barang dalam transaksi.         |
-| FR-07 | Sistem dapat menyimpan jumlah dan harga barang yang terjual. |
-| FR-08 | Sistem dapat menghitung subtotal pada detail penjualan.      |
-| FR-09 | Sistem dapat menyimpan total pembayaran transaksi.           |
-
-## 8. Struktur Data
-
-### Barang
-
-* Kode Barang sebagai Primary Key
-* Nama Barang
-* Kategori
-* Satuan
-* Harga Jual
-* Stok
-
-### Pelanggan
-
-* Kode Pelanggan sebagai Primary Key
-* Nama Pelanggan
-* Alamat
-* No. Telepon
-
-### Pegawai
-
-* Kode Pegawai sebagai Primary Key
-* Nama Pegawai
-* Jabatan
-* No. Telepon
-
-### Penjualan
-
-* No. Faktur sebagai Primary Key
-* Tanggal Transaksi
-* Kode Pelanggan sebagai Foreign Key
-* Kode Pegawai sebagai Foreign Key
-* Total Bayar
-
-### Detail Penjualan
-
-* No. Faktur sebagai Foreign Key
-* Kode Barang sebagai Foreign Key
-* Jumlah
-* Harga Satuan
-* Sub Total
-
-No. Faktur dan Kode Barang digunakan sebagai Primary Key pada Detail Penjualan.
-
-## 9. Relasi Antar Data
-
-Relasi antar tabel pada sistem yaitu:
-
-* Pelanggan berhubungan dengan Penjualan.
-* Pegawai berhubungan dengan Penjualan.
-* Penjualan berhubungan dengan Detail Penjualan.
-* Detail Penjualan berhubungan dengan Barang.
-
-Satu transaksi penjualan dapat memiliki beberapa barang. Karena itu, data barang yang dibeli disimpan pada tabel Detail Penjualan.
-
-## 10. Alur Proses Sistem
-
-Alur proses pada sistem secara sederhana yaitu:
-
-**Pelanggan datang → dilayani Pegawai → transaksi dicatat → barang yang dibeli dicatat pada Detail Penjualan → data barang digunakan → total pembayaran dicatat.**
-
-Dengan cara tersebut, satu nomor faktur dapat memiliki beberapa barang yang berbeda.
-
-## 11. Persyaratan Non-Fungsional
-
-Beberapa hal yang diharapkan dari sistem:
-
-* Data tersimpan dengan rapi.
-* Hubungan antar tabel jelas.
-* Data dapat digunakan untuk membuat laporan penjualan.
-* Sistem dapat digunakan untuk mengelola data transaksi dengan lebih mudah.
-* Data yang disimpan harus sesuai dengan struktur tabel yang sudah dibuat.
-
-## 12. Technical Design
-
-Perancangan sistem dibuat berdasarkan model relasional, diagram skema, dan ERD yang sudah dibuat sebelumnya.
-
-ERD dapat dilihat melalui link berikut:
-
-[Klik di sini untuk melihat ERD](MASUKKAN_LINK_ERD_DI_SINI)
-
-Struktur utama sistem terdiri dari tabel Barang, Pelanggan, Pegawai, Penjualan, dan Detail Penjualan. Tabel-tabel tersebut memiliki hubungan melalui Primary Key dan Foreign Key.
-
-## 13. Jadwal dan Timeline
-
-| Tahap | Kegiatan                             |
-| ----- | ------------------------------------ |
-| 1     | Menentukan kebutuhan sistem          |
-| 2     | Menentukan tabel dan atribut         |
-| 3     | Membuat model relasional             |
-| 4     | Membuat diagram skema dan ERD        |
-| 5     | Membuat PRD                          |
-| 6     | Menyelesaikan dan mengumpulkan tugas |
-
-## 14. Risiko dan Asumsi
-
-### Risiko
-
-* Kesalahan dalam menentukan relasi antar tabel.
-* Kesalahan dalam menentukan Primary Key dan Foreign Key.
-* Data yang dimasukkan tidak sesuai dengan struktur tabel.
-
-### Asumsi
-
-* Data yang digunakan sesuai dengan kebutuhan toko.
-* Setiap transaksi memiliki nomor faktur.
-* Satu transaksi dapat memiliki lebih dari satu barang.
-* Data pelanggan dan pegawai sudah tersedia saat transaksi dilakukan.
-
-## 15. Kriteria Keberhasilan
-
-Sistem dianggap sesuai apabila:
-
-* Semua tabel yang dibutuhkan sudah dibuat.
-* Primary Key dan Foreign Key sudah ditentukan.
-* Relasi antar tabel sesuai dengan kebutuhan sistem.
-* Data transaksi dapat disimpan.
-* Detail barang dalam transaksi dapat dicatat.
-* Struktur database sesuai dengan model relasional dan ERD.
-
-## 16. Persetujuan Pemangku Kepentingan
-
-PRD ini dibuat sebagai rancangan kebutuhan untuk sistem basis data toko penjualan retail dan digunakan sebagai dasar dalam proses perancangan database.
-
-## 17. Kesimpulan
-
-Sistem basis data toko penjualan retail dibuat untuk membantu mengelola data barang, pelanggan, pegawai, supplier, dan transaksi penjualan. Dengan adanya hubungan antar tabel, data transaksi dapat disimpan dengan lebih terstruktur dan dapat digunakan untuk kebutuhan pengelolaan serta laporan penjualan.
+**3. Layanan**
+- Kode_Layanan (Primary Key)
+- Nama_Layanan
+- Harga_Per_Kg
+- Estimasi_Hari
+
+**4. Transaksi**
+- No_Transaksi (Primary Key)
+- Tanggal_Masuk
+- Tanggal_Selesai
+- Status
+- Total_Bayar
+- Kode_Pelanggan (Foreign Key)
+- Kode_Pegawai (Foreign Key)
+
+**5. Detail_Transaksi**
+- No_Transaksi (Foreign Key)
+- Kode_Layanan (Foreign Key)
+- Berat
+- Harga
+- Subtotal
+
+Pada rancangan Detail_Transaksi, No_Transaksi dan Kode_Layanan dapat digunakan sebagai primary key gabungan (composite key), sesuai dengan rancangan schema diagram.
+
+### 4.8 Aturan Bisnis
+
+1. Setiap pelanggan memiliki kode pelanggan yang berbeda.
+2. Setiap pegawai memiliki kode pegawai yang berbeda.
+3. Setiap layanan memiliki kode layanan yang berbeda.
+4. Setiap transaksi memiliki nomor transaksi yang unik.
+5. Setiap transaksi berkaitan dengan satu pelanggan.
+6. Setiap transaksi ditangani oleh satu pegawai.
+7. Satu transaksi dapat memiliki beberapa detail layanan.
+8. Satu layanan dapat digunakan dalam banyak detail transaksi.
+9. Total pembayaran dihitung berdasarkan subtotal layanan yang digunakan.
+
+### 4.9 Relationship dan Kardinalitas
+
+| Relationship | Kardinalitas | Penjelasan |
+|---|---|---|
+| Pelanggan — Melakukan — Transaksi | 1:N | Satu pelanggan dapat melakukan banyak transaksi. |
+| Pegawai — Menangani — Transaksi | 1:N | Satu pegawai dapat menangani banyak transaksi. |
+| Transaksi — Memiliki — Detail_Transaksi | 1:N | Satu transaksi dapat memiliki beberapa detail transaksi. |
+| Layanan — Digunakan Pada — Detail_Transaksi | 1:N | Satu layanan dapat digunakan dalam banyak detail transaksi. |
+
+### 4.10 Kriteria Penerimaan
+
+Rancangan sistem dinyatakan sesuai dengan kebutuhan tugas jika:
+- Entitas dan atribut utama sudah dicantumkan.
+- Primary key dan foreign key sudah ditentukan.
+- Relationship dan kardinalitas sudah dijelaskan.
+- Detail transaksi dapat menghubungkan transaksi dengan layanan.
+- Nama entitas dan atribut konsisten dengan ERD dan schema diagram.
+
+### 4.11 Batasan Sistem
+
+Rancangan ini belum mencakup pembayaran online, notifikasi otomatis, layanan antar-jemput, akun pelanggan, atau laporan keuangan secara lengkap. Fitur tersebut dapat dikembangkan jika sistem dilanjutkan pada tahap berikutnya.
+
+## 5. Kesimpulan
+
+Rancangan basis data sistem laundry ini diharapkan dapat membantu proses pencatatan pelanggan, pegawai, layanan, dan transaksi secara lebih teratur. Dengan adanya ERD dan rancangan kebutuhan sistem, struktur data yang akan digunakan menjadi lebih mudah dipahami sebelum dikembangkan menjadi aplikasi.
